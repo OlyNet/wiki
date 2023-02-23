@@ -4,7 +4,7 @@ import Image from 'next/image'
  * @type {import('nextra-theme-docs').DocsThemeConfig}
  */
 export default {
-  docsRepositoryBase: 'https://github.com/joscha0/olynet-wiki/tree/main',
+  docsRepositoryBase: 'https://github.com/OlyNet/wiki/tree/main/',
   logo: (
     <>
       <span>
@@ -87,6 +87,7 @@ export default {
   search: {
     placeholder: 'Search...',
   },
+  feedback: false,
   navigation: true,
   footer: {
     text: <>MIT {new Date().getFullYear()} © Olynet e.V.</>,
