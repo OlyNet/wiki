@@ -24,16 +24,17 @@ export default {
         content="Das OlyNet ist ein studentischer Verein und hilft den Bewohnern des Olydorfs bei Internetproblemen"
       />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:image" content="https://nextra.vercel.app/og.png" />
-      <meta name="twitter:site:domain" content="nextra.vercel.app" />
-      <meta name="twitter:url" content="https://nextra.vercel.app" />
-      <meta name="og:title" content="Nextra: Next.js static site generator" />
-      <meta name="og:image" content="https://nextra.vercel.app/og.png" />
+      <meta name="twitter:site:domain" content="olynet.club" />
+      <meta name="twitter:url" content="https://www.olynet.club/" />
+      <meta
+        name="og:title"
+        content="Das OlyNet ist ein studentischer Verein und hilft den Bewohnern des Olydorfs bei Internetproblemen"
+      />
       <meta name="apple-mobile-web-app-title" content="Olynet" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="/apple-icon-180x180.png"
+        href="/apple-touch-icon.png"
       />
       <link
         rel="icon"
@@ -50,16 +51,9 @@ export default {
       <link
         rel="icon"
         type="image/png"
-        sizes="96x96"
-        href="/favicon-96x96.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
         sizes="16x16"
         href="/favicon-16x16.png"
       />
-      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     </>
   ),
   // search: true,
