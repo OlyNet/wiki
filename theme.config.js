@@ -3,9 +3,7 @@
  * @type {import('nextra-theme-docs').DocsThemeConfig}
  */
 export default {
-  github: 'https://github.com/joscha0/olynet-wiki',
   docsRepositoryBase: 'https://github.com/joscha0/olynet-wiki/tree/main',
-  titleSuffix: ' – Olynet',
   logo: (
     <>
       <span className="mr-2 font-extrabold hidden md:inline">Olynet</span>
@@ -76,4 +74,9 @@ export default {
     { locale: 'en', text: 'English' },
     { locale: 'de', text: 'Deutsch' },
   ],
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s – Olynet',
+    }
+  },
 }
