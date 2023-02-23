@@ -84,7 +84,9 @@ export default {
       />
     </>
   ),
-  // search: true,
+  search: {
+    placeholder: 'Search...',
+  },
   navigation: true,
   footer: {
     text: <>MIT {new Date().getFullYear()} © Olynet e.V.</>,
