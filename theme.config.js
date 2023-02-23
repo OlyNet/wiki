@@ -1,3 +1,7 @@
+/* eslint sort-keys: error */
+/**
+ * @type {import('nextra-theme-docs').DocsThemeConfig}
+ */
 export default {
   github: 'https://github.com/joscha0/olynet-wiki',
   docsRepositoryBase: 'https://github.com/joscha0/olynet-wiki/tree/main',
@@ -5,7 +9,6 @@ export default {
   logo: (
     <>
       <span className="mr-2 font-extrabold hidden md:inline">Olynet</span>
-      
     </>
   ),
   head: (
@@ -14,8 +17,14 @@ export default {
       <meta name="theme-color" content="#ffffff" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Language" content="en" />
-      <meta name="description" content="Das OlyNet ist ein studentischer Verein und hilft den Bewohnern des Olydorfs bei Internetproblemen" />
-      <meta name="og:description" content="Das OlyNet ist ein studentischer Verein und hilft den Bewohnern des Olydorfs bei Internetproblemen" />
+      <meta
+        name="description"
+        content="Das OlyNet ist ein studentischer Verein und hilft den Bewohnern des Olydorfs bei Internetproblemen"
+      />
+      <meta
+        name="og:description"
+        content="Das OlyNet ist ein studentischer Verein und hilft den Bewohnern des Olydorfs bei Internetproblemen"
+      />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:image" content="https://nextra.vercel.app/og.png" />
       <meta name="twitter:site:domain" content="nextra.vercel.app" />
@@ -55,15 +64,16 @@ export default {
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     </>
   ),
-  search: true,
-  prevLinks: true,
-  nextLinks: true,
-  footer: true,
-  footerEditLink: 'Edit this page on GitHub',
-  footerText: <>MIT {new Date().getFullYear()} © Olynet e.V.</>,
-  unstable_faviconGlyph: '👋',
+  // search: true,
+  navigation: true,
+  footer: {
+    text: <>MIT {new Date().getFullYear()} © Olynet e.V.</>,
+  },
+  editLink: {
+    text: 'Edit this page on GitHub',
+  },
   i18n: [
     { locale: 'en', text: 'English' },
     { locale: 'de', text: 'Deutsch' },
-  ]
+  ],
 }
