@@ -89,6 +89,7 @@ export default {
   },
   feedback: false,
   navigation: true,
+  primaryHue: 50,
   footer: {
     text: <>MIT {new Date().getFullYear()} © Olynet e.V.</>,
   },
