@@ -1,4 +1,7 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+
 /* eslint sort-keys: error */
 /**
  * @type {import('nextra-theme-docs').DocsThemeConfig}
@@ -85,19 +88,61 @@ export default {
     </>
   ),
   search: {
-    placeholder: 'Search...',
+    placeholder() {
+      const { locale } = useRouter()
+      return locale === 'de' ? 'Suchen...' : 'Search...'
+    },
   },
   feedback: false,
   navigation: true,
   primaryHue: 50,
   footer: {
-    text: <>MIT {new Date().getFullYear()} © Olynet e.V.</>,
+    component() {
+      const { locale } = useRouter()
+      return (
+        <div style={{ textAlign: 'center', padding: 15 }}>
+          <div style={{ display: 'flex', gap: 15, justifyContent: 'center' }}>
+            <Link href="/imprint">
+              {locale === 'de' ? 'Impressum' : 'Imprint'}
+            </Link>
+            <Link href="/privacy">
+              {locale === 'de' ? 'Datenschutzerklärung' : 'Privacy Policy'}
+            </Link>
+          </div>
+          <p>{new Date().getFullYear()} © Olynet e.V.</p>
+        </div>
+      )
+    },
   },
   editLink: {
-    text: 'Edit this page on GitHub',
+    text() {
+      const { locale } = useRouter()
+      return locale === 'de'
+        ? 'Diese Seite auf Github bearbeiten'
+        : 'Edit this page on GitHub'
+    },
   },
   sidebar: {
     toggleButton: true,
+  },
+  toc: {
+    title() {
+      const { locale } = useRouter()
+      return locale === 'de' ? 'Auf dieser Seite' : 'On This Page'
+    },
+  },
+  gitTimestamp({ timestamp }) {
+    const { locale } = useRouter()
+    return (
+      <>
+        {locale === 'de' ? 'Zuletzt aktualisiert am' : 'Last updated on'}{' '}
+        {timestamp.toLocaleDateString(locale, {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric',
+        })}
+      </>
+    )
   },
   i18n: [
     { locale: 'en', text: 'English' },
