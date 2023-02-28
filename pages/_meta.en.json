@@ -1,0 +1,10 @@
+{
+    "index": "Home",
+    "help": "Selfservice",
+    "imprint": {
+        "display": "hidden"
+    },
+    "privacy": {
+        "display": "hidden"
+    }
+}
