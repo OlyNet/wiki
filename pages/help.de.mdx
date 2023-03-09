@@ -1,3 +1,5 @@
+import { Tab, Tabs } from 'nextra-theme-docs'
+
 # Self Service
 
 Hier kannst du Antworten auf die häufigsten Fragen die Bewohner\*Innen an uns
@@ -36,11 +38,22 @@ Du kannst die folgenden Lösungsansätze probieren:
   Hausbesuch durchführen und prüfen ob deine Netzdose beschädigt ist. Sollte das
   der Fall sein, kontaktieren wir das Studentenwerk welches sich darum kümmert.
 
-### Wo finde ich die Netzdosen im Bungalow, Doppelbungalow oder Hochhaus?
+### Wo finde ich die Netzdosen?
 
-- Hochhaus: Bei den Steckdosen links vom Kleiderschrank
-- Bungalow: Im oberen Stockwerk unter dem Heizkörper
-- Doppelbungalow: Im Erdgeschoss im untersten Fach des Regals im "Wohnbereich"
+<Tabs items={['Hochhaus', 'Bungalow', 'Doppelbungalow', 'Stufenbauten']}>
+  <Tab>
+    An den Steckdosen links vom Kleiderschrank
+  </Tab>
+  <Tab>
+    Im oberen Stockwerk unter dem Heizkörper
+  </Tab>
+  <Tab>
+    Im Erdgeschoss im untersten Fach des Regals im "Wohnbereich"
+  </Tab>
+  <Tab>
+    An den Steckdosen unter dem Schreibtisch
+  </Tab>
+</Tabs>
 
 ### In welchen Port meiner Netzdose muss ich mein Ethernetkabel stecken?
 
