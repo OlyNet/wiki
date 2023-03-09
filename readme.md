@@ -1,22 +1,34 @@
-# [Nextra](https://nextra.vercel.app)
+# [Olynet Wiki ](https://www.olynet.club)
 
-_Warning: this project is not production ready, API might change without notice._
+![GitHub Deployment Status (main)](https://img.shields.io/github/deployments/OlyNet/wiki/production?label=vercel&logo=vercel)
+![License](https://img.shields.io/github/license/OlyNet/wiki)
 
-[![](https://vercel.com/button)](https://vercel.com/import/git?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra&c=1)
+https://olynet.club
 
-**Nextra** is a [Next.js](https://nextjs.org) and [MDX](https://mdxjs.com) powered, no-code site generator.
+Olynet's Self Service and Troubleshooting for dorm residents of the *Olympisches
+Dorf* regarding connectivity to the dorm's network and the internet.
 
-![](/public/demo.png)
+## Develop
+1. Install Docker and docker-compose
+2. Build the wiki with `docker-compose build app`
+3. Spin up the container, `docker-compose up`
+4. Visit `http://localhost:3000` to view dev server
+5. Happy coding!
 
-## Development
+Useful commands:
 
-The code of Nextra is under the [`core`](https://github.com/shuding/nextra/tree/core) branch.
+```sh
+$ docker-compose start # Start development server (container)
+$ docker-compose stop # To stop
+$ docker-compose restart # To restart
+$ docker-compose down # To remove the container
+```
 
-## Themes
+## Credits
 
-- [nextra-theme-docs](https://github.com/vercel/swr-site) ([demo](https://swr.vercel.app))
-- [nextra-theme-blog](https://github.com/shuding/site) ([demo](https://shud.in))
+* [Nextra](https://nextra.site) - Site Generation Framwork
+* [Vercel](https://vercel.com) - Hosting
 
----
+## License
 
-Created by [@shuding](https://github.com/shuding) and [@pacocoursey](https://github.com/pacocoursey) at [Vercel](https://vercel.com). Released under the MIT license.
+MIT License
