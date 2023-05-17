@@ -1,21 +1,178 @@
-# Olynet
+---
+title: Olynet – Olydorf
+---
 
-## General Information
+import Link from 'next/link'
+import cn from 'clsx'
+import { useState } from 'react'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
 
-Olynet is a student club that provides IT-Support for internet issues
-to students living in the dormitory "Olympisches Dorf" in Munich.
-You can also purchase pre-configured routers during our opening hours. 
-Please bring your network data sheet with your IP addresses with you.
+import { Features, Feature } from '../components/features'
 
-### Opening Hours
+import styles from './index.module.css'
 
-- Every Monday 20-21 o'clock
+<div className="home-content">
+  <div className="content-container">
+    <h1 className="headline">Olynet -<br className='sm:block hidden'/>IT club Olydorf</h1>
+    <p className="subtitle">Olynet is a student club that provides IT-Support for internet issues  <br className='sm:block hidden'/>to students living in the dormitory "Olympisches Dorf" in Munich</p>
+    <p className="subtitle">
+      <Link className={styles.cta} href="/help/help">Get Help <span>→</span></Link>
+    </p>
+  </div>
 
-Please check our social media during semester breaks or public holidays.
-If we are closed, we will let you know there.
+{' '}
 
-### Office
+<style jsx>{`
+  .content-container {
+    max-width: 90rem;
+    padding-left: max(env(safe-area-inset-left), 1.5rem);
+    padding-right: max(env(safe-area-inset-right), 1.5rem);
+    margin: 0 auto;
+  }
+  .features-container {
+    margin: 8rem 0 0;
+    padding: 4rem 0;
+    background-color: #f3f4f6;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .features-container .content-container {
+    margin-top: -8rem;
+  }
+  :global(.dark) .features-container {
+    background-color: #000;
+    border-bottom: 1px solid rgb(38, 38, 38);
+  }
+  .headline {
+    display: inline-block;
+    font-size: 3.125rem;
+    font-size: min(4.375rem, max(8vw, 2.5rem));
+    font-weight: 700;
+    font-feature-settings: initial;
+    letter-spacing: -0.12rem;
+    margin-left: -0.2rem;
+    margin-top: 3.4rem;
+    line-height: 1.1;
+    background-image: linear-gradient(146deg, #000, #757a7d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .headline2 {
+    display: inline-block;
+    font-size: 2.125rem;
+    font-size: min(2.375rem, max(5vw, 1.5rem));
+    font-weight: 700;
+    font-feature-settings: initial;
+    letter-spacing: -0.12rem;
+    margin-left: -0.2rem;
+    margin-top: 3.4rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+  }
+  :global(.dark) .headline {
+    background-image: linear-gradient(146deg, #fff, #757a7d);
+  }
+  .subtitle {
+    font-size: 1.3rem;
+    font-size: min(1.3rem, max(3.5vw, 1.2rem));
+    font-feature-settings: initial;
+    line-height: 1.6;
+  }
+  .nextjs-link {
+    color: currentColor;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  @media screen and (max-width: 1200px) {
+    .headline,
+    headline2 {
+      letter-spacing: -0.08rem;
+    }
+  }
+`}</style>
 
-You can find our office in the high-rise (Helene-Mayer-Ring 7) in the former
-community room (GAP) in the 2nd floor. If you live in a Bungalow, your key
-unfortunately only works for the staircase.
+  <div className="features-container">
+    <div className="content-container">
+      <Features>
+        <Feature index={0} large centered className="card-with-border">
+          <h3>Pre-configured Routers</h3>
+          <p>You can purchase pre-configured routers during our opening hours. <br className='sm:block hidden'/> Please bring your network data sheet with your IP addresses with you.</p>
+          <div  style={{display:"flex", }}>
+            <div style={{width:"50%", display:"flex", flexDirection:"column", alignItems:"center"}}>
+            <Image src="/assets/TP-Link_TL-WR940N.jpg" width={150} height={150}></Image>
+            <p>TP-Link TL-WR940N</p>
+            </div>
+            <div  style={{width:"50%", height:"100%", display:"flex", flexDirection:"column", alignItems:"center"}}>
+            <Image src="/assets/Netgear_R6120.jpeg" width={150} height={150}></Image>
+            <p>Netgear R6120</p>
+            </div>
+
+          </div>
+
+        </Feature>
+
+        <Feature index={1} centered className="card-with-border" >
+          <div className="h-full flex flex-col justify-between">
+            <h3>Office</h3>
+            <h4>Opening Hours</h4>
+            <p className='mb-4'>Monday: 20:00 - 21:00</p>
+            <p> Please check our social media during semester breaks or public holidays. If we are closed, we will let you know there.</p>
+            <h4>Location</h4>
+            <p>You can find our office in the high-rise (Helene-Mayer-Ring 7) in the former community room (GAP) in the 2nd floor. If you live in a Bungalow, your key unfortunately only works for the staircase.</p>
+          </div>
+        </Feature>
+
+        <Feature index={2} centered>
+          <h3>IT-Support</h3>
+          <p>If you have any questions try to use the self help. <br className='sm:block hidden'/> If you can't solve the problem on your own send us an email  or come to our office during the opening hours</p>
+        </Feature>
+
+        <Feature index={3} large centered >
+          <h3>Join Olynet</h3>
+          <p>Join the Team</p>
+        </Feature>
+
+
+      </Features>
+      <h2 className="headline2">Projects</h2>
+      <Features>
+        <Feature index={0} href="https://github.com/OlyNet/wiki">
+          <h3>Website</h3>
+          <p  className='mb-4'>This website</p>
+        </Feature>
+        <Feature index={1} href="https://github.com/OlyNet/olydorfapp">
+          <h3>App</h3>
+          <p className='mb-4'>The mobile app for olydorf student dormitory in munich. Currently working on the first release.</p>
+        </Feature>
+        <Feature index={2} >
+          <h3>3D Printer</h3>
+          <p className='mb-4'>Print your 3d models at our office</p>
+        </Feature>
+        </Features>
+        <h2 className="headline2">Social</h2>
+        <Features>
+        <Feature index={1} href="https://www.instagram.com/olynet_muc/">
+          <h3>Instagram</h3>
+        </Feature>
+        <Feature index={2} href="https://www.facebook.com/olynetVerein">
+          <h3>Facebook</h3>
+        </Feature>
+        <Feature index={3} href="https://github.com/OlyNet" >
+          <h3>Github</h3>
+        </Feature>
+        <Feature index={3} href="https://www.youtube.com/@olynet" >
+          <h3>YouTube</h3>
+        </Feature>
+        <Feature index={3} href="https://de.linkedin.com/company/olynet-e-v-" >
+          <h3>LinkedIn</h3>
+        </Feature>
+        <Feature index={3} href="mailto:office@olynet.club" >
+          <h3>Email</h3>
+        </Feature>
+        </Features>
+
+    </div>
+
+  </div>
+</div>
