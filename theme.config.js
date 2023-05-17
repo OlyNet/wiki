@@ -93,7 +93,7 @@ export default {
       return locale === 'de' ? 'Suchen...' : 'Search...'
     },
   },
-  feedback: false,
+  // feedback: null,
   navigation: true,
   primaryHue: 50,
   footer: {
@@ -148,9 +148,18 @@ export default {
     { locale: 'en', text: 'English' },
     { locale: 'de', text: 'Deutsch' },
   ],
+  // banner: {
+  //   key: 'alert1',
+  //   text: (
+  //     <p>no internet in high rise. issue has been reported to studentenwerk</p>
+  //   ),
+  // },
   useNextSeoProps() {
-    return {
-      titleTemplate: '%s – Olynet',
+    const { asPath } = useRouter()
+    if (asPath !== '/') {
+      return {
+        titleTemplate: '%s – Olynet',
+      }
     }
   },
 }

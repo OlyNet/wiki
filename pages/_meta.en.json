@@ -1,6 +1,16 @@
 {
-    "index": "Home",
-    "help": "Self Service",
+    "index": {
+        "type":"page", 
+        "title":"Home",
+        "display": "hidden",
+        "theme": {
+          "layout": "raw"
+        }
+      },
+    "help":{
+        "type":"page", 
+        "title": "Self Service"
+    },
     "imprint": {
         "display": "hidden"
     },
