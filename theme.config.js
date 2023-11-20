@@ -126,6 +126,7 @@ export default {
     toggleButton: true,
   },
   toc: {
+    float: false,
     title() {
       const { locale } = useRouter()
       return locale === 'de' ? 'Auf dieser Seite' : 'On This Page'
