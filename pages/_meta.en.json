@@ -1,6 +1,7 @@
 {
     "index": "Home",
     "help": "Self Service",
+    "membership": "Membership",
     "imprint": {
         "display": "hidden"
     },
